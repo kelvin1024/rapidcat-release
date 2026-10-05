@@ -56,7 +56,7 @@ const RAPIDCAT_SITE_TRANSLATIONS = {"en":{"nav":["Home","Tour","Support","Privac
   if(page==='helper') {
    const card=document.createElement('div');card.className='card';
 
-   [['https://github.com/kelvin1024/rapidcat-release/releases/download/helper/RapidCat-Helper.dmg',t.download[0]],['https://github.com/kelvin1024/rapidcat-release/releases/download/helper/SHA256SUMS.txt',t.download[1]]].forEach(([url,name],i)=>{if(i)card.append(document.createTextNode(' · '));const a=document.createElement('a');a.href=url;a.textContent=name;card.append(a);});main.append(card);
+   [['https://github.com/kelvin1024/rapidcat-release/releases/download/helper-v1.0-build1/RapidCat-Helper-1.0-1.dmg',t.download[0]],['https://github.com/kelvin1024/rapidcat-release/releases/download/helper-v1.0-build1/SHA256SUMS.txt',t.download[1]]].forEach(([url,name],i)=>{if(i)card.append(document.createTextNode(' · '));const a=document.createElement('a');a.href=url;a.textContent=name;card.append(a);});main.append(card);
   }
   // Local links embedded in the original policy keep the active language.
   for(const a of main.querySelectorAll('a[href]')) {const u=new URL(a.getAttribute('href'),location.href);if(u.origin===location.origin&&pages.some(p=>u.pathname.endsWith('/'+p+'.html'))){u.searchParams.set('lang',lang);a.setAttribute('href',u.pathname.split('/').pop()+u.search);}}
